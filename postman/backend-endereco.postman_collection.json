@@ -132,7 +132,7 @@
       "response": []
     },
     {
-      "name": "Delete data",
+      "name": "Delete Dado-endereco",
       "event": [
         {
           "listen": "test",
