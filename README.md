@@ -87,50 +87,43 @@ GetAdress
 
 Método: GET
 
-URL: http://localhost:3000/addresses?search=joinville
+` http://localhost:3000/addresses?search=joinville`
 
 CreateUser
 
 Método: POST
 
-URL: http://localhost:3000/user
+` http://localhost:3000/user`
 
-Corpo (Body): Envia credenciais de usuário (email e password).
 
 Update data
 
 Método: PUT
 
-URL: http://localhost:3000/addresses/2
-
-Corpo (Body): Atualiza um dado específico (number).
+`http://localhost:3000/addresses/2`
 
 Delete Dado-endereco
 
 Método: DELETE
 
-URL: http://localhost:3000/addresses/2
+` http://localhost:3000/addresses/2`
 
 Login
 
 Método: POST
 
-URL: http://localhost:3000/login
-
-Corpo (Body): Envia credenciais de login (email e password).
+` http://localhost:3000/login`
 
 Adress
 
 Método: POST
 
-URL: http://localhost:3000/addresses
-
-Corpo (Body): Envia os dados completos de um endereço (street, number, city, state, zip_code).
+` http://localhost:3000/addresses`
 
 CreateShared(link-temporário)
 
 Método: POST
 
-URL: http://localhost:3000/addresses/3/share
+` http://localhost:3000/addresses/3/share`
 
 
