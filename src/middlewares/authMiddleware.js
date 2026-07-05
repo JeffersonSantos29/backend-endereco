@@ -28,8 +28,7 @@ module.exports = (req, res, next) => {
             return res.status(401).json({ error: 'Token inválido ou expirado.' });
         }
 
-        // Passa o ID do usuário logado para a requisição
-        // Isso atende ao requisito de registrar o id do usuário nas operações 
+        // Passa o ID do usuário logado para a requisição   
         req.userId = decoded.id; 
         
         
