@@ -1,0 +1,32 @@
+services:
+  # Banco de Dados
+  db:
+    image: postgres:15
+    container_name: postgres-db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: address_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # API Node.js
+  api:
+    build: .
+    container_name: backend-node-api
+    restart: always
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      
+      DB_HOST: db 
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
