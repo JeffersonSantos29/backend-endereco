@@ -1,12 +1,16 @@
-# Backend Endereço
+#  Backend Endereço
 
-Serviço de backend para CRUD de endereços com rotas protegidas (JWT). Sistema de logs para operações críticas e endpoints de acesso temporário não autenticado.
+Serviço de backend construído em Node.js e Express para um CRUD de endereços com rotas protegidas por JWT. O sistema conta com logs passivos para operações críticas, testes automatizados e endpoints de acesso temporário não autenticado via links de compartilhamento.
 
-## Pré-requisitos
+##  Pré-requisitos
 
-- [Node.js](https://nodejs.org/) >= 18
-- [Docker](https://docs.docker.com/get-docker/) & [Docker Compose](https://docs.docker.com/compose/install/)
-- [PostgreSQL](https://www.postgresql.org/download/) (opcional, apenas se rodar sem Docker)
+* [Node.js](https://nodejs.org/) (v18 ou superior)
+* [Docker](https://docs.docker.com/get-docker/) & [Docker Compose](https://docs.docker.com/compose/install/)
+* [PostgreSQL](https://www.postgresql.org/download/) (apenas caso rode localmente sem o Docker)
+
+---
+
+##  Arquitetura e Fluxo de Dados
 
 ```mermaid
 sequenceDiagram
@@ -105,6 +109,9 @@ sequenceDiagram
     %% Notas de Instrumentação
     Client-->>App: Express + bcrypt + jsonwebtoken | PostgreSQL (pg) | dotenv
 
+
+
+```
 ## Rodando com Docker (recomendado)
 
 1. Clone o repositório e acesse a pasta:
@@ -169,11 +176,12 @@ npm start
 ## Estrutura do projeto
 
 ```
+_tests_/
+postman/
 src/
 ├── config/
 ├── controllers/
 ├── middlewares/
-├── models/
 ├── routes/
 └── server.js
 ```
