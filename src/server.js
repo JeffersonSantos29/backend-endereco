@@ -17,6 +17,10 @@ app.get('/ping', (req, res) => {
     res.json({ message: 'Servidor rodando perfeitamente!' });
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
-});
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Servidor rodando na porta ${PORT}`);
+    });
+}
+
+module.exports = app;
