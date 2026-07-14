@@ -7,6 +7,19 @@ const addressRoutes = require('./routes/addressRoutes');
 const app = express();
 app.use(express.json());
 
+// Configuração do middleware Prometheus
+const promBundle = require('express-prom-bundle');
+const metricsMiddleware = promBundle({
+    includeMethod: true,
+    includePath: true,
+    includeStatusCode: true,
+    includeUp: true,
+    promClient: {
+        collectDefaultMetrics: {}
+    }
+});
+app.use(metricsMiddleware);
+
 // Registro de rotas no Express
 app.use('/', userRoutes);
 app.use('/', addressRoutes); 

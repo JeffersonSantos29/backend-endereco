@@ -13,18 +13,60 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-  # API Node.js
+  # API Node.js (Configurada para suportar escalabilidade/load-balancing)
   api:
     build: .
-    container_name: backend-node-api
     restart: always
-    ports:
-      - "3000:3000"
     env_file:
       - .env
     environment:
-      
-      DB_HOST: db 
+      DB_HOST: db
+    depends_on:
+      - db
+
+  # Nginx Reverse Proxy & Load Balancer
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-load-balancer
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - api
+
+  # Prometheus para coleta de métricas
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus-monitoring
+    restart: always
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    depends_on:
+      - api
+
+  # Grafana para visualização de métricas do Prometheus
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana-visualizer
+    restart: always
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - prometheus
+
+  # Metabase para Business Intelligence dos dados de endereço
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase-bi
+    restart: always
+    ports:
+      - "3002:3000"
     depends_on:
       - db
 
