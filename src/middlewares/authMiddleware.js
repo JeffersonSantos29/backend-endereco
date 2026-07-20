@@ -1,5 +1,5 @@
+require('../config/env');
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
 
 module.exports = (req, res, next) => {
     // Busca o token no cabeçalho da requisição

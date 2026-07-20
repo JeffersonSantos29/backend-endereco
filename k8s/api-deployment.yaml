@@ -20,15 +20,24 @@ spec:
             - name: DB_HOST
               value: "db-service"
             - name: DB_USER
-              value: "admin"
+              valueFrom:
+                secretKeyRef:
+                  name: backend-endereco-secrets
+                  key: db-user
             - name: DB_PASSWORD
-              value: "admin"
+              valueFrom:
+                secretKeyRef:
+                  name: backend-endereco-secrets
+                  key: db-password
             - name: DB_NAME
               value: "address_db"
             - name: DB_PORT
               value: "5432"
             - name: JWT_SECRET
-              value: "seu_secret_super_seguro"
+              valueFrom:
+                secretKeyRef:
+                  name: backend-endereco-secrets
+                  key: jwt-secret
             - name: PORT
               value: "3000"
           ports:

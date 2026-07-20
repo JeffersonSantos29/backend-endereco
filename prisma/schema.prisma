@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique @db.VarChar(255)
+  password  String   @db.VarChar(255)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  addresses Address[]
+  logs      Log[]
+
+  @@map("users")
+}
+
+model Address {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  street    String   @db.VarChar(255)
+  number    String   @db.VarChar(50)
+  city      String   @db.VarChar(255)
+  state     String   @db.VarChar(50)
+  zipCode   String   @map("zip_code") @db.VarChar(20)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("addresses")
+}
+
+model Log {
+  id           Int      @id @default(autoincrement())
+  userId       Int?     @map("user_id")
+  action       String   @db.VarChar(50)
+  entityId     Int      @map("entity_id")
+  previousData Json?    @map("previous_data")
+  newData      Json?    @map("new_data")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@map("logs")
+}

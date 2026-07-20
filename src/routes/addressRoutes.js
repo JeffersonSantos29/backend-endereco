@@ -2,17 +2,18 @@ const express = require('express');
 const router = express.Router();
 const addressController = require('../controllers/addressController');
 const authMiddleware = require('../middlewares/authMiddleware');
+const { publicLimiter } = require('../middlewares/rateLimiter');
 
-//  ROTA PÚBLICA 
+//  ROTA PÚBLICA
 
-router.get('/shared/:token', addressController.getSharedAddress);
+router.get('/shared/:token', publicLimiter, addressController.getSharedAddress);
 
 
 //  BARREIRA DE AUTENTICAÇÃO
 router.use(authMiddleware);
 
 
-//  ROTAS PROTEGIDAS 
+//  ROTAS PROTEGIDAS
 
 router.post('/addresses', addressController.createAddress);
 router.get('/addresses', addressController.getAddresses);

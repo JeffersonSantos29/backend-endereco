@@ -28,9 +28,15 @@ spec:
           image: postgres:15
           env:
             - name: POSTGRES_USER
-              value: "admin"
+              valueFrom:
+                secretKeyRef:
+                  name: backend-endereco-secrets
+                  key: db-user
             - name: POSTGRES_PASSWORD
-              value: "admin"
+              valueFrom:
+                secretKeyRef:
+                  name: backend-endereco-secrets
+                  key: db-password
             - name: POSTGRES_DB
               value: "address_db"
           ports:

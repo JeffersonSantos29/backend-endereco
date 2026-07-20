@@ -29,7 +29,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODMyNjkxOTAsImV4cCI6MTc4MzM1NTU5MH0.h6SaHWEuj-8wbgXZEAcIYoJZEtQ1E2vwHFJuzTmyP94",
+              "value": "{{token}}",
               "type": "string"
             }
           ]
@@ -126,7 +126,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODMyNjkxOTAsImV4cCI6MTc4MzM1NTU5MH0.h6SaHWEuj-8wbgXZEAcIYoJZEtQ1E2vwHFJuzTmyP94",
+              "value": "{{token}}",
               "type": "string"
             }
           ]
@@ -182,7 +182,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODMyNjkxOTAsImV4cCI6MTc4MzM1NTU5MH0.h6SaHWEuj-8wbgXZEAcIYoJZEtQ1E2vwHFJuzTmyP94",
+              "value": "{{token}}",
               "type": "string"
             }
           ]
@@ -250,7 +250,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODMyNjkxOTAsImV4cCI6MTc4MzM1NTU5MH0.h6SaHWEuj-8wbgXZEAcIYoJZEtQ1E2vwHFJuzTmyP94",
+              "value": "{{token}}",
               "type": "string"
             }
           ]
@@ -288,7 +288,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODMyNjkxOTAsImV4cCI6MTc4MzM1NTU5MH0.h6SaHWEuj-8wbgXZEAcIYoJZEtQ1E2vwHFJuzTmyP94",
+              "value": "{{token}}",
               "type": "string"
             }
           ]
@@ -326,7 +326,7 @@
     "bearer": [
       {
         "key": "token",
-        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODMyNzI2NTEsImV4cCI6MTc4MzM1OTA1MX0.jU1LFCeRPJ9sGdCjz4IzEKKAfmaePaIsJixU3wayov4",
+        "value": "{{token}}",
         "type": "string"
       }
     ]
@@ -361,6 +361,11 @@
     {
       "key": "base_url",
       "value": "https://template.postman-echo.com"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "description": "Preencha executando POST /login e colando o token retornado. Nunca commite um valor real aqui."
     }
   ]
 }
