@@ -29,7 +29,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "{{token}}",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODQ1Nzc3MTcsImV4cCI6MTc4NDY2NDExN30.R-J0mX2ocGRgqUEUJ6RSqna_qoqbLuKCkM4YSbCQLGY",
               "type": "string"
             }
           ]
@@ -37,12 +37,11 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/addresses?search=joinville",
+          "raw": "http://localhost/addresses?search=joinville",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "3000",
           "path": [
             "addresses"
           ],
@@ -80,7 +79,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"email\": \"jeff_santos@gmail.com\",\n    \"password\": \"passwordteste1\"\n}",
+          "raw": "{\n    \"email\": \"jefferson_santos@gmail.com\",\n    \"password\": \"jeje\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -88,12 +87,11 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/user",
+          "raw": "http://localhost/user",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "3000",
           "path": [
             "user"
           ]
@@ -126,7 +124,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "{{token}}",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODMyNjkxOTAsImV4cCI6MTc4MzM1NTU5MH0.h6SaHWEuj-8wbgXZEAcIYoJZEtQ1E2vwHFJuzTmyP94",
               "type": "string"
             }
           ]
@@ -143,12 +141,11 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/addresses/2",
+          "raw": "http://localhost/addresses/2",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "3000",
           "path": [
             "addresses",
             "2"
@@ -182,7 +179,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "{{token}}",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODMyNjkxOTAsImV4cCI6MTc4MzM1NTU5MH0.h6SaHWEuj-8wbgXZEAcIYoJZEtQ1E2vwHFJuzTmyP94",
               "type": "string"
             }
           ]
@@ -199,12 +196,11 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/addresses/2",
+          "raw": "http://localhost/addresses/2",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "3000",
           "path": [
             "addresses",
             "2"
@@ -229,12 +225,11 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/login",
+          "raw": "http://localhost/login",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "3000",
           "path": [
             "login"
           ]
@@ -250,7 +245,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "{{token}}",
+              "value": "    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODM3MDI2MzYsImV4cCI6MTc4Mzc4OTAzNn0.1xZcjbVCZcurVoX2EL4fnNxqCktZwvbUs5hdsAKeEK8\"\n",
               "type": "string"
             }
           ]
@@ -267,12 +262,11 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/addresses",
+          "raw": "http://localhost/addresses",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "3000",
           "path": [
             "addresses"
           ]
@@ -288,7 +282,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "{{token}}",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODMyNjkxOTAsImV4cCI6MTc4MzM1NTU5MH0.h6SaHWEuj-8wbgXZEAcIYoJZEtQ1E2vwHFJuzTmyP94",
               "type": "string"
             }
           ]
@@ -305,12 +299,11 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/addresses/3/share",
+          "raw": "http://localhost/addresses/3/share",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "3000",
           "path": [
             "addresses",
             "3",
@@ -326,7 +319,7 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{token}}",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqZWZmX3NhbnRvc0BnbWFpbC5jb20iLCJpYXQiOjE3ODMyNzI2NTEsImV4cCI6MTc4MzM1OTA1MX0.jU1LFCeRPJ9sGdCjz4IzEKKAfmaePaIsJixU3wayov4",
         "type": "string"
       }
     ]
@@ -361,11 +354,6 @@
     {
       "key": "base_url",
       "value": "https://template.postman-echo.com"
-    },
-    {
-      "key": "token",
-      "value": "",
-      "description": "Preencha executando POST /login e colando o token retornado. Nunca commite um valor real aqui."
     }
   ]
 }
